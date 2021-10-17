@@ -8,5 +8,6 @@ RUN apk update && apk add --update \
     cmake \
     gcc \
     build-base \
-    boost-dev
+    boost-dev \
+    openssh
 
