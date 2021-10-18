@@ -1,15 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:focal
 
-RUN apk update && apk add --update \
-    bash \
-    git \
-    wget \
-    make \
-    cmake \
-    gcc \
-    build-base \
-    boost-dev \
-    openssh
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y update \
+ && apt-get -y install build-essential wget git cmake vim cmake-curses-gui
 
 CMD sleep infinity
 

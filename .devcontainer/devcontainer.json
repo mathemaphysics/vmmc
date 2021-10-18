@@ -8,10 +8,10 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/ash"
+		"terminal.integrated.shell.linux": "/bin/bash"
 	},
 
-	"mounts": ["source=${localEnv:HOME},target=/root,type=bind,consistency=cached"]
+	"mounts": ["source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind"],
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
