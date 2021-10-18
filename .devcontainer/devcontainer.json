@@ -11,7 +11,7 @@
 		"terminal.integrated.shell.linux": "/bin/ash"
 	},
 
-	"mounts": ["source=${localEnv:HOME},target=/home/vscode,type=bind,consistency=cached"]
+	"mounts": ["source=${localEnv:HOME},target=/root,type=bind,consistency=cached"]
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
@@ -34,5 +34,5 @@
 	// "postCreateCommand": "gcc -v",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	//"remoteUser": "vscode"
 }
