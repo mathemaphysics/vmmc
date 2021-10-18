@@ -5,7 +5,7 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/ash"
 	},
 
 	"mounts": ["source=${localEnv:HOME},target=/home/vscode,type=bind,consistency=cached"]
