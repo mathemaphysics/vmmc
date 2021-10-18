@@ -1,14 +1,13 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.148.1/containers/cpp/.devcontainer/base.Dockerfile
+FROM alpine:latest
 
-# [Choice] Debian / Ubuntu version: debian-10, debian-9, ubuntu-20.04, ubuntu-18.04
-#ARG VARIANT="buster"
-ARG VARIANT="focal"
-FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
+RUN apk update && apk add --update \
+    bash \
+    git \
+    wget \
+    make \
+    cmake \
+    gcc \
+    build-base \
+    boost-dev \
+    openssh
 
-# [Optional] Uncomment this section to install additional packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends libboost-all-dev
-RUN apt-get -y install --no-install-recommends vim
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install libopencv-dev
-ENV EDITOR=vim
